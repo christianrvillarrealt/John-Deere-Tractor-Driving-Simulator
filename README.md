@@ -7,7 +7,7 @@ The agricultural sector and its products are a cornerstone of the sustainability
 
 The design of a user interface composed of a configurable logic device, the **Field Programmable Gate Array**, provided two useful tools and a unique enriching experience for the creation of prototypes necessary to validate ideas, concepts, and solutions to real world problems. The **DE10-Lite FPGA Board** was fundamental in our project and facilitated the creation of electronic device prototypes with embedded systems in an efficient and economic form. FPGAs allow for configuration and re-configuration of hardware according to the specified needs of the project without the need to manufacture multiple testing chips. This not only optimized our resources, but also opened us to a wide array of opportunities for innovation and practical learning, essential in the technological industry.
 
-![DE10-Lite Board]https://www.mouser.mx/images/marketingid/2016/img/132318264_TerasicTechnologies_DE10-LiteBoard-TerasicTechnologies.png?v=030625.0353)
+![DE10-Lite Board](https://www.mouser.mx/images/marketingid/2016/img/132318264_TerasicTechnologies_DE10-LiteBoard-TerasicTechnologies.png?v=030625.0353)
 
 For the creation of the software environment of the simulation, we used **Unity**, widely used for videogame development. In addition, to manage version control of the final product and the advancement of multiple conforming aspects of the project, we used **Plastic SCM**. By using these tools, we maintained constant and structured progress and fluid and efficient collaboration. 
 
