@@ -35,10 +35,16 @@ The input and output variables define the state changes such as how gameStart is
 
 ### Arithemtic Expressions
 
+The states change according to the level. Each time a level is passed, the 'level' variable is added '1' to it and the amount of crops to collect is added a specific amount along with the given amount of time.
+
 ### Equality and Relational Operations
+
+Equality operations are used for each change of state as the sustem is based on identifying when a button or switched are changed from '1' to '0' or from '0' to '1', for which cases for each are created. The values in the states gameInit and gameStart start at '0' and need to be activated to '1'. Here are the Mealy Machines that compare the corresponding variable to each state with '0' amd '1'. For the game levels, we start by comparing the amount of remaining lives to know if the game will be kept or to the gameFailed state, then the amount of collected crops are constantly compared with the number of objective crops for the level until reaching the desired number as long as the time is not up.
 
 ---
 
 ## Board Programming
+
+
 
 ### de10_lite.vhd
