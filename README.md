@@ -1,6 +1,10 @@
 # John-Deere-Tractor-Driving-Simulator
 John Deere Tractor Driving Simulator developed with the Unity game engine included with vehicle control via a Terasic DE10-Lite FPGA board programmed with Quartus Prime software VHDL.
 
+<p align='center'>
+  <img src='[https://github.com/user-attachments/assets/aee6c0af-6d8f-406a-87b8-1e93b461cace](https://github.com/user-attachments/assets/9a4e5add-22a4-4cf0-a473-92aae9fe30d0)' />
+</p>
+
 ---
 
 The agricultural sector and its products are a cornerstone of the sustainability of human survival and activity due to its provision of energy and nutrients required by the human population scattered all across the world. In this project, we collaborated with John Deere, one of the most important global corporations in this sector, and delved into programmable logic devices, with an FPGA as the main tool for digital design.
