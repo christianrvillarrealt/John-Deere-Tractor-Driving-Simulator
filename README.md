@@ -43,8 +43,64 @@ Equality operations are used for each change of state as the sustem is based on 
 
 ---
 
-## Board Programming
+## FPGA DE10-Lite Programming
 
+### de10_lite.vhd (Top-Level Entity)
+- **Purpose**: Main design for DE10-Lite board.
+- **Ports**:
+    Internal clock, push buttons (keys), switches (switches).
+    Serial communication (TX, RX).
+    LEDs, accelerometer (G sensor).
+    Motion control (up/down) and RGB colors.
+    7-segment displays (game score).
+- **Instantiated Components**:
+    **UART**: Serial communication.
+    **Debounce**: Button noise filtering.
+    **Reset Delay**: Reset signal generation.
+    **SPI PLL/EEPROM**: SPI configuration and EEPROM management.
+    **LED Driver**: LED control based on accelerometer data.
+    **Digit Counter**: Data display on 7-segment displays.
 
+### uart.vhd (Serial communication)
+- **Purpose**: Enable serial communication between the FPGA and Unity.
+- **Ports**: Clock, reset, transmission (TX), reception (RX).
+- **Key Signals**:
+    **tx_state / rx_state**: State machine states.
+    **baud_pulse / os_pulse**: Baud rate control.
+    **parity_error**: Error detection.
+- **Processes**:
+    TX/RX state machines.
+    Parity calculation (error detection).
 
-### de10_lite.vhd
+### debounce.vhd (Noise Filtering)
+- **Purpose**: Filter noise from button presses.
+- **Ports**: Clock, button input, filtered output **(debounced)**.
+- **Logic**:
+    Pulse counting for signal stabilization **(COUNT)**.
+    **done** signal indicates process completion.
+
+### DigitCounter.vhd (Binary to Decimal Conversion)
+- **Purpose**: Convert 8-bit binary input to 3 decimal digits (units, tens, hundreds).
+- **Components:**
+    Decoder.vhd instance to display digits on 7-segment displays.
+- **Operations**: Uses modulo and integer division for decomposition.
+
+### Decoder.vhd (4-bit to 7-Segment Decoder)
+- **Purpose**: Convert hexadecimal values to 7-segment display patterns.
+- **Logic:**
+    Direct mapping with with select for each digit (0-F).
+
+### Pin Assignments (Pin Planner)
+- **Board**: MAX 10 10M50DAF484C76.
+- **Standards**:
+    Main signals: 3.3-V LVTTL (8 mA).
+    GPIO (TX/RX): 2.5 V (12 mA).
+**Mapped Peripherals**:
+  Clock (CLOCK_50), accelerometer (GSENSOR), displays (HEXL), LEDs (LEDR), buttons, and switches.
+
+![PinPlanner](https://github.com/user-attachments/assets/a7553692-bbf9-4e35-8ee8-ceccf73aaac4)
+![PinPlanner2](https://github.com/user-attachments/assets/996cdbd2-0e36-48eb-98b9-ecced2497890)
+
+### Additional Modules (Provided by Intel)
+- spi_ee_config.v, spi_controller.v, reset_delay.v, led_driver.v, DE_LITE_GSensor.v.
+- **Purpose**: Accelerometer handling and motion data transmission to Unity.
