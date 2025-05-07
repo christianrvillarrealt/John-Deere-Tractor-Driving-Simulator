@@ -108,3 +108,11 @@ Equality operations are used for each change of state as the sustem is based on 
 ### Additional Modules (Provided by Intel)
 - spi_ee_config.v, spi_controller.v, reset_delay.v, led_driver.v, DE_LITE_GSensor.v.
 - **Purpose**: Accelerometer handling and motion data transmission to Unity.
+
+---
+
+## Serial Communication
+
+### Switches
+
+### Accelerometer
