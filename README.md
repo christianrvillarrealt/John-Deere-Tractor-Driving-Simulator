@@ -2,7 +2,7 @@
 John Deere Tractor Driving Simulator developed with the Unity game engine included with vehicle control via a Terasic DE10-Lite FPGA board programmed with Quartus Prime software VHDL.
 
 <p align='center'>
-  <img src='https://github.com/user-attachments/assets/aee6c0af-6d8f-406a-87b8-1e93b461cace](https://github.com/user-attachments/assets/9a4e5add-22a4-4cf0-a473-92aae9fe30d0' />
+  <img src='https://github.com/user-attachments/assets/9a4e5add-22a4-4cf0-a473-92aae9fe30d0' />
 </p>
 
 ---
